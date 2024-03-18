@@ -15,7 +15,7 @@ from core.views import CategoriaViewSet, EditoraViewSet, AutorViewSet
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
-router.register(r"autores", AutorViewSet)
+router.register(r"autors", AutorViewSet)
 router.register(r"users", UserViewSet, basename="users")
 
 urlpatterns = [
