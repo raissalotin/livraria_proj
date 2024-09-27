@@ -148,6 +148,8 @@ REST_FRAMEWORK = {
     # "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissions",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": ("core.authentication.TokenAuthentication",), # Autenticação no passage.id
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated"), # Permissão total para usuários autenticados
     "PAGE_SIZE": 10,
 }
 
