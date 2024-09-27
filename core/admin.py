@@ -13,10 +13,10 @@ class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
 
     ordering = ["id"]
-    list_display = ["email", "nome"]
+    list_display = ["email", "name"]
     fieldsets = (
         (None, {"fields": ("email", "password")}),
-        (_("Personal Info"), {"fields": ("nome",)}),
+        (_("Personal Info"), {"fields": ("name",)}),
         (
             _("Permissions"),
             {
@@ -52,10 +52,10 @@ class UserAdmin(BaseUserAdmin):
 class UserAdmin(UserAdmin):
     @admin.register(Autor)
     class AutorAdmin(admin.ModelAdmin):
-        list_display = ('nome', 'email')
-    search_fields = ('nome', 'email')
-    list_filter = ('nome',)
-    ordering = ('nome', 'email')
+        list_display = ('name', 'email')
+    search_fields = ('name', 'email')
+    list_filter = ('name',)
+    ordering = ('name', 'email')
     list_per_page = 10
 
 @admin.register(Categoria)
